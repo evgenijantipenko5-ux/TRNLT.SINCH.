@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRNLT.SINCH</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="contener">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend dropdown-hover">
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button">Ввод</button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Файлы</a>
+              </div>
+            </div>
+            <input id="videoInput" type="text" class="form-control" placeholder="Вставьте ссылку на видео или выберите файл..." aria-label="" aria-describedby="basic-addon1">
+            <input id="fileInput" type="file" accept="video/*,audio/*" hidden>
+          </div>
+        <header class="header">
+            <h1 class="logo__text">TRNLT.SINCH  Evgeny A</h1>
+        </header>
+        <div class="video__player">
+            
+        </div>
+        <div class="translate__player">
+            <div class="dictaphone">
+                <div class="dictaphone__controls">
+                    <button class="dictaphone__btn dictaphone__btn--record" id="recordBtn" title="Запись">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <circle cx="12" cy="12" r="6" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <button class="dictaphone__btn dictaphone__btn--stop" id="stopBtn" title="Стоп" disabled>
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <rect x="6" y="6" width="12" height="12" rx="1" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <button class="dictaphone__btn dictaphone__btn--play" id="playBtn" title="Воспроизвести" disabled>
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <polygon points="8,5 19,12 8,19" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="recordingStatus" class="dictaphone__status"></div>
+                <audio id="dictaphoneAudio" controls hidden></audio>
+                <div class="dictaphone__transcription">
+                    <div class="dictaphone__lang">
+                        <select id="recognitionLang">
+                            <option value="ru-RU">Русский</option>
+                            <option value="en-US">English</option>
+                            <option value="de-DE">Deutsch</option>
+                            <option value="fr-FR">Français</option>
+                            <option value="es-ES">Español</option>
+                            <option value="zh-CN">中文</option>
+                            <option value="ar-SA">العربية</option>
+                            <option value="pt-BR">Português</option>
+                            <option value="ja-JP">日本語</option>
+                            <option value="ko-KR">한국어</option>
+                            <option value="it-IT">Italiano</option>
+                            <option value="tr-TR">Türkçe</option>
+                        </select>
+                    </div>
+                    <textarea id="transcriptionText" class="dictaphone__text" placeholder="Распознанная речь..." readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>

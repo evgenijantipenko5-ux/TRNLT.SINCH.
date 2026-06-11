@@ -1,0 +1,218 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+.contener{
+    padding-top: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    background-color: #20bfb2;
+    border-radius: 25px;
+}
+
+.logo__text{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: #FFF;
+}
+
+.dropdown-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-hover .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 160px;
+    padding: 8px 0;
+    margin-top: 4px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 6px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.dropdown-hover:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 6px 20px;
+    color: #212529;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: #1e2125;
+}   
+
+.video__player{
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.video__player iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+}
+
+.video__player video {
+    max-width: 100%;
+    height: 600px;
+    border-radius: 12px;
+}
+
+.video__player audio {
+    width: 100%;
+    max-width: 600px;
+}
+
+.dictaphone {
+    margin-top: 15px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+
+.dictaphone__controls {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dictaphone__btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    background: #fff;
+    color: #333;
+}
+
+.dictaphone__btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.dictaphone__btn--record {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.dictaphone__btn--record:hover:not(:disabled) {
+    background: #dc3545;
+    color: #fff;
+}
+
+.dictaphone__btn--stop {
+    border-color: #6c757d;
+    color: #6c757d;
+}
+
+.dictaphone__btn--stop:hover:not(:disabled) {
+    background: #6c757d;
+    color: #fff;
+}
+
+.dictaphone__btn--play {
+    border-color: #198754;
+    color: #198754;
+}
+
+.dictaphone__btn--play:hover:not(:disabled) {
+    background: #198754;
+    color: #fff;
+}
+
+.dictaphone__btn--recording {
+    animation: pulse 1s infinite;
+    background: #dc3545;
+    color: #fff;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.dictaphone__status {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #6c757d;
+    min-height: 20px;
+}
+
+.dictaphone__transcription {
+    margin-top: 12px;
+}
+
+.dictaphone__lang {
+    margin-bottom: 8px;
+}
+
+.dictaphone__lang select {
+    padding: 6px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+.dictaphone__lang select:focus {
+    border-color: #20bfb2;
+}
+
+.dictaphone__text {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: vertical;
+    outline: none;
+    background: #fff;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.dictaphone__text:focus {
+    border-color: #20bfb2;
+}
+
